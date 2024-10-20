@@ -4,6 +4,7 @@ import { IProduct } from "../interface/Product";
 const productSchema = new Schema<IProduct>({
     title: {
         type: String,
+        // unique: true,
         required: true,
     },
     description: {
@@ -25,6 +26,20 @@ const productSchema = new Schema<IProduct>({
     link: {
         type: String,
         required: true,
+    },
+    product: {
+        type: String,
+        required: true,
+    },
+    category: {
+        type: String,
+        required: true,
+    },
+    highestPrice: {
+        type: String,
+    },
+    lowestPrice: {
+        type: String,
     }
 });
 
